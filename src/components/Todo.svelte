@@ -48,6 +48,8 @@
 		onkeydown={(e) => {
 			if (e.key === 'Enter') {
 				makeNew();
+			} else if (e.key === 'Backspace' && info.text === '') {
+				remove();
 			}
 		}}
 	/>

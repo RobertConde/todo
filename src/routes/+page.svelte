@@ -1,10 +1,8 @@
 <script lang="ts">
 	import Todo from '../components/Todo.svelte';
-	import type { Todo as Todo_T, TodoInfo } from '../types';
+	import type { TodoInfo } from '../types';
 	import { todos } from '../stores';
 	import { v4 as uuidv4 } from 'uuid';
-	import { onMount } from 'svelte';
-	import { blur } from 'svelte/transition';
 
 	const updateInfo = (id: string, info: TodoInfo | null) => {
 		todos.update((ts) => {
