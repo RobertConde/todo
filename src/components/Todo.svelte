@@ -32,7 +32,7 @@
 	<input class="rounded-md" type="checkbox" checked={info.done} onchange={toggleDone} />
 
 	<input
-		class="flex-grow rounded-md border-0 p-0 hover:outline-dashed hover:outline-gray-300 focus:outline-none focus:ring-0"
+		class="hover:outline-nonefocus:outline-none flex-grow border-0 p-0 hover:border-b-2 hover:border-dashed focus:border-b-2 focus:border-solid focus:border-slate-500 focus:ring-0"
 		type="text"
 		value={info.text}
 		oninput={(e) => edit((e.target as HTMLInputElement).value)}
