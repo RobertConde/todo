@@ -3,6 +3,8 @@
 	import type { Todo as Todo_T, TodoInfo } from '../types';
 	import { todos } from '../stores';
 	import { v4 as uuidv4 } from 'uuid';
+	import { onMount } from 'svelte';
+	import { blur } from 'svelte/transition';
 
 	const updateInfo = (id: string, info: TodoInfo | null) => {
 		todos.update((ts) => {
@@ -41,7 +43,7 @@
 
 	{#each $todos as { id, info } (id)}
 		{#if info}
-			<Todo {info} updateInfo={updater(id)} />
+			<Todo {info} updateInfo={updater(id)} makeNew={addTodo} />
 		{/if}
 	{/each}
 </div>
